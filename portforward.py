@@ -131,7 +131,7 @@ def add_rule(rule_list, soup, opts):
     rule["Name"] = opts.name
     rule["StartPort"] = opts.ports[0]
     rule["EndPort"] = opts.ports[1]
-    rule["IpAddr"] = opts.address
+    rule["IpAddr"] = opts.address.split(".")[3]
     rule["Protocol"] = opts.protocol
     rule["Enable"] = "1"
 
